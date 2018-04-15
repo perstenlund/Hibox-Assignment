@@ -1,0 +1,26 @@
+main {
+  @include display-flex;
+  @include justify-content(center);
+  @include flex-direction(column);
+
+  // Button
+  button {
+    background: rgba($haBlue, .15);
+    border: 3px solid $haBlue;
+    border-radius: 3px;
+    @include box-shadow(0 0 4px $haBlue);
+    color: $haBlue;
+    margin: 100px auto 0;
+    outline: none;
+    padding: 0 40px;
+    @include user-select(none);
+    z-index: 2;
+    &:hover {
+      background: rgba($haBlue, .25);
+    }
+    &:active {
+      background: rgba($haBlue, .5);
+      @include transform(scale(1.05));
+    }
+  }
+}

@@ -1,0 +1,23 @@
+* {
+  @include box-sizing(border-box);
+  &:before, &:after {
+    @include box-sizing(border-box);
+  }
+}
+html, body {
+  height: 100%;
+}
+body {
+  @include align-items(center);
+  @include display-flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+}
+main {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  main {
+    width: $containerSize;
+  }
+}

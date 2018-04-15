@@ -1,0 +1,19 @@
+.diagonal {
+  div {
+    &:nth-child(1) {
+      @include transform(translate3d(0, 0, 0));
+    }
+    &:nth-child(2) {
+      @include transform(translate3d(123px, 123px, 0));
+    }
+    &:nth-child(3) {
+      @include transform(translate3d(246px, 246px, 0));
+    }
+    &:nth-child(4) {
+      @include transform(translate3d(369px, 369px, 0));
+    }
+    &:nth-child(5) {
+      @include transform(translate3d(492px, 492px, 0));
+    }
+  }
+}
