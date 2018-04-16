@@ -2,14 +2,35 @@ main {
   @include display-flex;
   @include justify-content(center);
   @include flex-direction(column);
+  padding: 20px;
+
+  // Heading
+  h1 {
+    color: $haRed;
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 auto 40px;
+    @include text-shadow(0 0 1px $haRed);
+    &:before {
+      color: $haBlue;
+      content: 'Pattern:';
+      display: block;
+      font-size: 21px;
+      margin: 0 auto 6px;
+      opacity: .5;
+      @include text-shadow(0 0 3px $haBlue);
+      text-decoration: underline;
+    }
+  }
 
   // Button
   button {
     background: rgba($haBlue, .15);
     border: 3px solid $haBlue;
     border-radius: 3px;
-    @include box-shadow(0 0 4px $haBlue);
+    @include box-shadow(0 0 5px $haBlue);
     color: $haBlue;
+    line-height: 60px;
     margin: 100px auto 0;
     outline: none;
     padding: 0 40px;
@@ -20,7 +41,6 @@ main {
     }
     &:active {
       background: rgba($haBlue, .5);
-      @include transform(scale(1.05));
     }
   }
 }

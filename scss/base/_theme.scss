@@ -3,8 +3,10 @@ body {
   @include background-image($haBackground);
 
   // Scan lines
+  $scanLineWidth: 1px;
   &:before {
-    @include background-image(repeating-linear-gradient(top, transparent 0px, transparent 1px, rgba(0, 0, 0, 0.25) 1px, rgba(0, 0, 0, 0.25) 2px));
+    @include background-image(repeating-linear-gradient(top, transparent 0px, transparent $scanLineWidth, rgba(0, 0, 0, 0.25) $scanLineWidth, rgba(0, 0, 0, 0.25) $scanLineWidth * 2));
+    background-size: 100% $scanLineWidth * 2;
     content: '';
     height: 100%;
     width: 100%;

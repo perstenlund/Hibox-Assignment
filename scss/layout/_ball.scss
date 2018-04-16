@@ -1,0 +1,47 @@
+div {
+  background: $haBlue;
+  border-radius: 50%;
+  @include box-shadow(0 0 15px $haBlue);
+  height: $ballSize;
+  width: $ballSize;
+  @include transition(transform $haAnimationDuration ease-in-out);
+  position: absolute;
+
+  // Mobile
+  &:nth-child(1) {
+    @include transform(translate3d(0, $centerMobile, 0));
+  }
+  &:nth-child(2) {
+    @include transform(translate3d(calc(#{$centerMobile} / 2), $centerMobile, 0));
+  }
+  &:nth-child(3) {
+    @include transform(translate3d($centerMobile, $centerMobile, 0));
+  }
+  &:nth-child(4) {
+    @include transform(translate3d(calc(#{$centerMobile} + #{$centerMobile} / 2), $centerMobile, 0));
+  }
+  &:nth-child(5) {
+    @include transform(translate3d(calc(#{$animationSpaceSizeMobile - $ballSize}), $centerMobile, 0));
+  }
+}
+
+// Desktop
+@media (min-width: $haBreakPoint) {
+  div {
+    &:nth-child(1) {
+      @include transform(translate3d(0, $centerDesktop, 0));
+    }
+    &:nth-child(2) {
+      @include transform(translate3d(calc(#{$centerDesktop} / 2), $centerDesktop, 0));
+    }
+    &:nth-child(3) {
+      @include transform(translate3d($centerDesktop, $centerDesktop, 0));
+    }
+    &:nth-child(4) {
+      @include transform(translate3d(calc(#{$centerDesktop} + #{$centerDesktop} / 2), $centerDesktop, 0));
+    }
+    &:nth-child(5) {
+      @include transform(translate3d(calc(#{$animationSpaceSizeDesktop - $ballSize}), $centerDesktop, 0));
+    }
+  }
+}

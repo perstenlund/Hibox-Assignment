@@ -13,11 +13,14 @@ body {
   @include flex-direction(column);
   @include justify-content(center);
 }
-main {
-  width: 100%;
+#animationSpace {
+  height: $animationSpaceSizeMobile;
+  width: $animationSpaceSizeMobile;
+  position: relative;
 }
-@media (min-width: 576px) {
-  main {
-    width: $containerSize;
+@media (min-width: $haBreakPoint) {
+  #animationSpace {
+    height: $animationSpaceSizeDesktop;
+    width: $animationSpaceSizeDesktop;
   }
 }

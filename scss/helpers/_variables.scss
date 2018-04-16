@@ -3,7 +3,18 @@ $haBackground: linear-gradient(45deg, #0d1332, #0b4267);
 
 // Colors
 $haBlue: #61c8d1;
+$haRed: #d31088;
 
 // Sizes
-$containerSize: 540px;
-$circleSize: 48px;
+$haBreakPoint: 768px;
+$ballSize: 48px;
+
+
+// Animation Space
+$animationSpaceSizeMobile: 320px;
+$animationSpaceSizeDesktop: 540px;
+
+$haAnimationDuration: .5s;
+
+$centerMobile: $animationSpaceSizeMobile / 2 - $ballSize / 2;
+$centerDesktop: $animationSpaceSizeDesktop / 2 - $ballSize / 2;

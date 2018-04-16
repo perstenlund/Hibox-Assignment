@@ -1,5 +1,6 @@
-var section = document.getElementsByTagName('section')[0];
-var button = document.getElementsByTagName('button')[0];
+var currentPatternText = document.getElementById('currentPatternText');
+var animationSpace = document.getElementById('animationSpace');
+var animateButton = document.getElementById('animateButton');
 
 var oldPatternIndex = -1;
 var newPatternIndex = -1;
@@ -15,7 +16,8 @@ function newPattern() {
   while (newPatternIndex == oldPatternIndex) {
     newPatternIndex = Math.floor(Math.random() * patterns.length);
   }
-  section.className = patterns[newPatternIndex];
+  currentPatternText.innerHTML = patterns[newPatternIndex];
+  animationSpace.className = patterns[newPatternIndex];
   oldPatternIndex = newPatternIndex;
 }
-button.onclick = newPattern;
+animateButton.onclick = newPattern;
